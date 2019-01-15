@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue-国际化</title>
+</head>
+<body>
+	<div id="app">
+		{{$t("local.name")}}
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
+	<script>
+		Vue.use({
+			local:VueI18n,
+			messages:{
+				'zh-cn':require('/zn-cn.js'),
+				'en-us':require('/en-us.js')
+			}
+		})
+
+		new Vue({
+			el:"#app",
+			i18n,
+		})
+
+
+	</script>
+
+</body>
+</html>
