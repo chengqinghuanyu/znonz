@@ -32,6 +32,12 @@ export default {
     //console.log(this.$i18n.locale);
     console.log(this)
   },
+  mounted(){
+
+    this.getConfigJson();
+    //之后...用在需要用到的地方 因为ApiUrl已经是全局了 可以直接用this.ApiUrl
+    var url=this.ApiUrl+'/api/'
+  },
   methods:{
     seti18n(){
       if(this.$i18n.locale){

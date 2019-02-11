@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title class="title">
+
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style >
+        .browser-tips{
+            position: absolute;
+            left: 50%;
+            width: 768px;
+            margin-left:-379px;
+
+        }
+        .support-contain {
+            margin: 100px auto 0;
+            width: 765px;
+            padding: 30px;
+            background-color: #fff;
+            font-size: 16px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 1px #efefef;
+
+            height: 300px;
+            font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, sans-serif;
+            zoom: 1;
+             /* filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=5, OffY=5, Color=#efefef); */
+        }
+        .mt20 {
+            vertical-align: middle;
+            height: 50px;
+            width: 130px;
+        }
+        .support-contain .imgie {
+            float: left;
+            margin-right: 40px
+        }
+        .support-contain .h3ie {
+            padding-top: 10px;
+            font-size: 16px;
+            font-weight: 400
+        }
+        .support-contain ul {
+            list-style: none
+        }
+        .support-contain ul li {
+            float: left;
+            text-align: center;
+            margin: 35px 35px 0 0;
+            margin-right: 5px\0;
+            width: 135px;
+        }
+        .support-contain ul li a {
+            font-size: 14px;
+            color: #014051;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .support-contain ul li img {
+            display: block;
+            margin-bottom: 1em;
+            border: none;
+            height: 64px;
+            text-align: center;
+            margin: 10px auto;
+        }
+        .container{
+            float: right;
+        }
+        .language{
+            height: 26px;
+        }
+    </style>
+    <script>
+     function getExploreBIGN() {
+        'use strict';
+        var supert={
+          isIe:null,
+          ver:null
+        };
+          if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0") { 
+            return {
+                    isIe:true,
+                    ver:6
+                  }; 
+          } 
+          else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE7.0") { 
+            return {
+                    isIe:true,
+                    ver:7
+                  }; 
+          } 
+          else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE8.0") { 
+            return {
+                    isIe:true,
+                    ver:8
+                  }; 
+          } 
+          else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE9.0") { 
+            return {
+                    isIe:true,
+                    ver:9
+                  }; 
+          }else{
+            return {
+                    isIe:false,
+                    ver:null
+                  }; 
+          }
+      }
+      if(getExploreBIGN().isIe&&getExploreBIGN().ver){
+       
+      }else{
+        window.location.href="/#/login";
+      }
+      
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com//jquery.i18n/1.0.5/jquery.i18n.js"></script>
+	<script src="https://cdn.bootcss.com/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+	<script src="https://cdn.bootcss.com/jquery.i18n/1.0.4/jquery.i18n.fallbacks.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery.i18n/1.0.5/jquery.i18n.parser.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery.i18n/1.0.4/jquery.i18n.emitter.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.i18n/1.0.5/jquery.i18n.language.min.js"></script>
+</head>
+
+
+<body>
+    <div class="browser-tips">
+        <div class="support-contain">
+            <div class="support-top">
+                    <div class="imgie">
+                        <img class="mt20" src="../img/bcis-logo.jpg" />
+                        </div>
+                        <div class="container">
+                                <div class="lead">
+                                    <select class="language span3">
+                                        <option value="cn">中文</option>
+                                        <option value="en">English</option>
+                                    </select>
+                                </div>
+                        </div>
+            </div>
+            <h3 class="h3ie">尊敬的用户：</h3>
+            <p><span class="useringContinue">为了保证您良好的用户体验，建议您从下列浏览器中选择一款进行访问。若坚持使用该浏览器，请您继续使用</span></p>
+            <ul>
+                <li><a id="download_Chorme" href="https://www.baidu.com/s?wd=Chrome" target="_blank" title="https://www.baidu.com/s?wd=Chrome"><img src="../img/chrome.png"  title="chrome"/>
+                        <span>Chrome</span></a></li>
+                <!-- <li><a id="download_IE" href="https://www.baidu.com/s?wd=ie11" target="_blank" title="https://www.baidu.com/s?wd=ie11"><img src="../img/IE.png"  title="IE11"/>
+                        <span>IE11</span></a></li> -->
+                <li><a id="download_360_fast" href="http://chrome.360.cn/" target="_blank" title="http://chrome.360.cn/"><img class="ml20" src="../img/360-js.png"  title="360"/>
+                        <span>360  <i class="extremeBrowser">极速浏览器</i></span></a></li>
+                <li>
+                    <a id="download_360" href="http://se.360.cn/" target="_blank" title="http://se.360.cn/"><img src="../img/360.jpg" title="360"/> 
+                    <span >360 <i class="browser">浏览器</i></span>
+                    <br />
+                    <span class="extremeSpeedMode">极速模式</span>
+                    </a>
+                 </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function updateText() {
+        'use strict';
+        var i18n = $.i18n(),title,language,respectedUser,useringContinue,extremeBrowser,browser,extremeSpeedMode;
+        respectedUser = 'respectedUser',
+        useringContinue = "useringContinue",
+        extremeBrowser = "extremeBrowser",
+        browser="browser",
+        extremeSpeedMode="extremeSpeedMode",
+        title="title",
+        language = $( '.language option:selected' ).val();
+        i18n.locale = language;
+        i18n.load( 'i18n/demo-' + i18n.locale + '.json', i18n.locale ).done(
+            function () {
+                var localizedMessage = $.i18n(respectedUser),
+                useringContinueMeassage = $.i18n(useringContinue),
+                extremeBrowserMessage = $.i18n(extremeBrowser),
+                browserMessage = $.i18n(browser),
+                extremeSpeedModeMessage= $.i18n(extremeSpeedMode),
+                titleMessage = $.i18n(title)
+                $( '.h3ie' ).text( localizedMessage ).prop( 'title', i18n.localize(respectedUser) );
+                $( '.useringContinue' ).text( useringContinueMeassage ).prop( 'title', i18n.localize(useringContinue));
+                $( '.extremeBrowser' ).text( extremeBrowserMessage ).prop( 'title', i18n.localize(extremeBrowser));
+                $( '.browser' ).text( browserMessage ).prop( 'title', i18n.localize(browser));
+                $( '.extremeSpeedMode' ).text( extremeSpeedModeMessage ).prop( 'title', i18n.localize(extremeSpeedMode));
+                $( '.title' ).text( titleMessage ).prop( 'title', i18n.localize(title));
+                
+            } );
+    }
+    // Enable debug
+    //$.i18n.debug = true;
+    
+    $( document ).ready( function ( $ ) {
+        'use strict';
+        updateText();
+        $('.language' ).on( 'change keyup',updateText);
+    });
+        </script>
+</body>
+</html>

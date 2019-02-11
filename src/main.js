@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import axios from 'axios'
 import router from './router'
 import VueI18n from 'vue-i18n'
 import {getStorage} from './untils/index'
@@ -17,6 +18,17 @@ let i18n = new VueI18n({
 	}
 
 })
+Vue.prototype.$http = axios;
+
+Vue.prototype.getConfigJson=function(){
+  let date = new Date().getTime();
+  this.$http.get("../static/serviceconfig.json"+"?v"+date).then((result)=>{
+    console.log(result);
+    //用一个全局字段保存ApiUrl 也可以用sessionStorage存储
+    Vue.prototype.ApiUrl=result.data.ApiUrl;
+    console.log(Vue.prototype.ApiUrl)
+  }).catch((error)=>{console.log(error)});
+}
 
 new Vue({
   el: '#app',

@@ -6,8 +6,11 @@ import onlineOffline from '../views/onlineOffline'
 
 import hoverAction from '../views/hoverAction'
 import pdf from '../views/pdf'
+import login from '../views/login'
 
 import notice from '../views/notice'
+import web from '../views/web'
+import ztree from '../views/ztree'
 
 
 Vue.use(Router)
@@ -43,6 +46,21 @@ export default new Router({
       path: '/notice',
       name: 'notice',
       component: notice
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/web',
+      name: 'web',
+      component: web
+    },
+    {
+      path:'/ztree',
+      name:'ztree',
+      component:ztree
     }
   ]
 })
