@@ -11,6 +11,8 @@ import login from '../views/login'
 import notice from '../views/notice'
 import web from '../views/web'
 import ztree from '../views/ztree'
+import excel from '../views/excel';
+import table from '../views/table';
 
 
 Vue.use(Router)
@@ -61,6 +63,16 @@ export default new Router({
       path:'/ztree',
       name:'ztree',
       component:ztree
+    },
+    {
+      path:'/excel',
+      name:'excel',
+      component:excel
+    },
+    {
+      path:'/table',
+      name:'table',
+      component:table
     }
   ]
 })

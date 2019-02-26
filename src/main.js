@@ -7,6 +7,11 @@ import router from './router'
 import VueI18n from 'vue-i18n'
 import {getStorage} from './untils/index'
 
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
 Vue.config.productionTip = false
 Vue.use(VueI18n)
 //let vuex = Vue.use(Vuex)
