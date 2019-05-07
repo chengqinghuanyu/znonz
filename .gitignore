@@ -13,3 +13,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 static/img/robot.png
+static/img/bg-logo.jpg
